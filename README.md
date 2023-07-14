@@ -1,0 +1,2 @@
+# pybsky
+Python BlueSky client
