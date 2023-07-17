@@ -1,7 +1,7 @@
 # Pybsky
 
 <div >
-    <img src=readme_content/cover.png height="150" width="500" alt="social-media-logo" class="center" >
+    <img src=readme_content/cover.png height="150" width="500" alt="social-media-logo">
 
 </div>
 
@@ -9,13 +9,13 @@
 
 - [x] Create Client
 - [x] Add Login logic
-- [x] Get Profile logic
-- [x] Get Follwer/Following logic
-- [x] Follow/Unfollow
-- [x] Get Likers
-- [x] Get Commenters
-- [x] Get Feed/Timeline
-- [x] Post skeets
+- [ ] Get Profile logic
+- [ ] Get Follwer/Following logic
+- [ ] Follow/Unfollow
+- [ ] Get Likers
+- [ ] Get Commenters
+- [ ] Get Feed/Timeline
+- [ ] Post skeets
 
 ## License
 
