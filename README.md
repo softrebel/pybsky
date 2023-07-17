@@ -1,7 +1,7 @@
 # Pybsky
 
 <div >
-    <img src=readme_content/cover.png height="150" width="500" alt="social-media-logo" >
+    <img src=readme_content/cover.png height="150" width="500" alt="social-media-logo" class="center" >
 
 </div>
 
