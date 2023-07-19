@@ -1,5 +1,10 @@
-class AuthenticationRequired(Exception):
+class AuthenticationRequiredException(Exception):
     """Invalid identifier(username.bsky.social) or password"""
 
-class UnknownResponse(Exception):
+
+class UnknownResponseException(Exception):
     """Unknown Response"""
+
+
+class BadRequestResponseException(Exception):
+    """Bad Response"""
