@@ -1,4 +1,3 @@
-import json
 import random
 import requests
 
@@ -38,13 +37,12 @@ class LoginMixin():
         }
         url = 'https://bsky.social/xrpc/com.atproto.server.createSession'
         response = requests.post(url, headers=headers, json=payload)
-
+        content = response.json()
         if response.status_code == 200:
-            self.access_jwt = response.json()["accessJwt"]
-            self.refresh_jwt = response.json()["refreshJwt"]
+            self.access_jwt = content["accessJwt"]
+            self.refresh_jwt = content["refreshJwt"]
             return True
         elif response.status_code == 401:
-            content = json.loads(response.text)
             raise AuthenticationRequired(content['message'])
         else:
             raise UnknownResponse(
