@@ -1,9 +1,11 @@
 # Pybsky
 
 <div align='center'>
-    <img src=assets/cover.png height="150" width="500" alt="pybsky-logo" >
+
+![./a](./assets/cover.png)
 
 </div>
+
 
 ## TODO List:
 
