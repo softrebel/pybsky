@@ -1,7 +1,6 @@
-
 import requests
-from mixins import LoginMixin, FeedMixin
-from core import USER_AGENTS, SERVER_URL
+from .mixins import LoginMixin, FeedMixin
+from .core import USER_AGENTS, SERVER_URL
 import random
 from pydantic import BaseModel
 
@@ -14,12 +13,7 @@ class Client(BaseModel, LoginMixin, FeedMixin):
     user_agent: str = None
     session: requests.session = None
 
-    def __init__(
-        self,
-        proxies=None,
-        server=None,
-        **kwargs
-    ):
+    def __init__(self, proxies=None, server=None, **kwargs):
         super().__init__(**kwargs)
 
         self.server = server if server else SERVER_URL
@@ -36,4 +30,4 @@ class Client(BaseModel, LoginMixin, FeedMixin):
         if self.server in username:
             return username
         else:
-            return f'{username}.{self.server}'
+            return f"{username}.{self.server}"
