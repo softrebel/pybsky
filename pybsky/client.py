@@ -2,16 +2,15 @@ import requests
 from .mixins import LoginMixin, FeedMixin
 from .core import USER_AGENTS, SERVER_URL
 import random
-from pydantic import BaseModel
 
 
-class Client(BaseModel, LoginMixin, FeedMixin):
+class Client(LoginMixin, FeedMixin):
     server: str = None
     proxies: str = None
     access_jwt: str = None
     refresh_jwt: str = None
     user_agent: str = None
-    session: requests.session = None
+    session: requests.Session = None
 
     def __init__(self, proxies=None, server=None, **kwargs):
         super().__init__(**kwargs)
