@@ -38,4 +38,7 @@ class LoginMixin:
         validated_response = validate_get_response(response)
         self.access_jwt = validated_response["accessJwt"]
         self.refresh_jwt = validated_response["refreshJwt"]
+        self.session.headers.update({"authorization": f"Bearer {self.access_jwt}"})
+        own_profile = self.get_profile(self.get_actor(username))
+        self.own_profile = own_profile
         return validated_response

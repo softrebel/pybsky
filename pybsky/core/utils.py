@@ -24,7 +24,10 @@ def json_encode(obj: object) -> str:
 
 
 def validate_get_response(response: Response):
-    content = response.json()
+    if response.text and response.text != "":
+        content = response.json()
+    else:
+        content = response.text
     if response.status_code == 200:
         return content
     elif response.status_code == 401:

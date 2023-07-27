@@ -8,3 +8,11 @@ class UnknownResponseException(Exception):
 
 class BadRequestResponseException(Exception):
     """Bad Response"""
+
+
+class ProfileRequiredException(Exception):
+    """Profile required Exception"""
+
+
+class NotFollowingException(Exception):
+    """Not Following Exception"""
