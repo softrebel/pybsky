@@ -11,13 +11,13 @@
 
 - [x] Create Client
 - [x] Add Login logic
-- [ ] Get Profile logic
-- [ ] Get Follwer/Following logic
-- [ ] Follow/Unfollow
-- [ ] Get Likers
-- [ ] Get Commenters
-- [ ] Get Feed/Timeline
-- [ ] Post skeets
+- [x] Get Profile logic
+- [x] Get Follwer/Following logic
+- [x] Follow/Unfollow
+- [x] Get likes
+- [x] Get post, thread via replies
+- [x] Get Author Feed/Timeline
+- [x] Create post (text and image)
 
 ## License
 
