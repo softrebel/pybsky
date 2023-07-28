@@ -4,3 +4,4 @@ from .graph import GraphMixin
 from .profile import ProfileMixin
 from .server import ServerMixin
 from .post import PostMixin
+from .repo import RepoMixin

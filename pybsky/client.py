@@ -6,6 +6,7 @@ from .mixins import (
     ProfileMixin,
     ServerMixin,
     PostMixin,
+    RepoMixin,
 )
 from .core import (
     USER_AGENTS,
@@ -18,7 +19,9 @@ import random
 from datetime import datetime, timezone
 
 
-class Client(LoginMixin, FeedMixin, GraphMixin, ProfileMixin, ServerMixin, PostMixin):
+class Client(
+    LoginMixin, FeedMixin, GraphMixin, ProfileMixin, ServerMixin, PostMixin, RepoMixin
+):
     server: str = None
     proxies: str = None
     access_jwt: str = None
@@ -80,12 +83,17 @@ class Client(LoginMixin, FeedMixin, GraphMixin, ProfileMixin, ServerMixin, PostM
         data: dict = None,
         json: dict = None,
     ):
-        self.session.headers.update({"Authorization": f"Bearer {self.access_jwt}"})
+        request_headers = self.session.headers.copy()
+        request_headers.update({"Authorization": f"Bearer {self.access_jwt}"})
         if headers:
-            self.session.headers.update(headers)
-
+            request_headers.update(headers)
         response = self.session.request(
-            method=method, url=url, params=params, data=data, json=json
+            method=method,
+            url=url,
+            params=params,
+            data=data,
+            json=json,
+            headers=request_headers,
         )
         return response
 
