@@ -1,5 +1,12 @@
 import requests
-from .mixins import LoginMixin, FeedMixin, GraphMixin, ProfileMixin, ServerMixin
+from .mixins import (
+    LoginMixin,
+    FeedMixin,
+    GraphMixin,
+    ProfileMixin,
+    ServerMixin,
+    PostMixin,
+)
 from .core import (
     USER_AGENTS,
     SERVER_URL,
@@ -8,9 +15,10 @@ from .core import (
     DELETE_RECORD_URL,
 )
 import random
+from datetime import datetime, timezone
 
 
-class Client(LoginMixin, FeedMixin, GraphMixin, ProfileMixin, ServerMixin):
+class Client(LoginMixin, FeedMixin, GraphMixin, ProfileMixin, ServerMixin, PostMixin):
     server: str = None
     proxies: str = None
     access_jwt: str = None
@@ -90,3 +98,8 @@ class Client(LoginMixin, FeedMixin, GraphMixin, ProfileMixin, ServerMixin):
         url = f"{BSKY_BASE_URL}{DELETE_RECORD_URL}"
         data = dict(collection=collection, repo=repo, rkey=rkey)
         return self.send_request(method="POST", url=url, json=data)
+
+    def get_createdAt_now(self):
+        now = datetime.now(timezone.utc)
+        createdAt = now.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
+        return createdAt
