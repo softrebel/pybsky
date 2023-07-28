@@ -6,8 +6,23 @@
 
 </div>
 
+# Requirements
+Python 3.10+
 
-## TODO List:
+Pybsky stands on the shoulder of:
+- requests package
+
+# Installation
+<div class="termy">
+  
+```console
+ $ pip install pybsky
+
+---> 100%
+```
+</div>
+
+## Feature List:
 
 - [x] Create Client
 - [x] Add Login logic
