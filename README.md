@@ -1,15 +1,26 @@
-# pybsky
-Python BlueSky client
+# Pybsky
+
+<div align='center'>
+
+![./a](./assets/cover.png)
+
+</div>
 
 
-## Todos:
+## TODO List:
 
- - Create Client
- - Add Login logic
- - Get Profile logic
- - Get Follwer/Following logic
- - Follow/Unfollow
- - Get Likers
- - Get Commenters
- - Get Feed/Timeline
- - Post skeets
+- [x] Create Client
+- [x] Add Login logic
+- [ ] Get Profile logic
+- [ ] Get Follwer/Following logic
+- [ ] Follow/Unfollow
+- [ ] Get Likers
+- [ ] Get Commenters
+- [ ] Get Feed/Timeline
+- [ ] Post skeets
+
+## License
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+- This project is licensed under the terms of the **[MIT license](LICENSE)**
