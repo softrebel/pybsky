@@ -14,7 +14,7 @@ Pybsky stands on the shoulder of:
 
 # Installation
 <div class="termy">
-  
+
 ```console
  $ pip install pybsky
 
@@ -33,6 +33,8 @@ Pybsky stands on the shoulder of:
 - [x] Get post, thread via replies
 - [x] Get Author Feed/Timeline
 - [x] Create post (text and image)
+- [x] Get List Notifications
+- [x] Update Seen Notification
 
 ## License
 

@@ -7,6 +7,7 @@ from .mixins import (
     ServerMixin,
     PostMixin,
     RepoMixin,
+    NotificationMixin,
 )
 from .core import (
     USER_AGENTS,
@@ -20,7 +21,14 @@ from datetime import datetime, timezone
 
 
 class Client(
-    LoginMixin, FeedMixin, GraphMixin, ProfileMixin, ServerMixin, PostMixin, RepoMixin
+    LoginMixin,
+    FeedMixin,
+    GraphMixin,
+    ProfileMixin,
+    ServerMixin,
+    PostMixin,
+    RepoMixin,
+    NotificationMixin,
 ):
     server: str = None
     proxies: str = None

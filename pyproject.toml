@@ -1,6 +1,6 @@
 [project]
 name = "pybsky"
-version = "0.0.15"
+version = "0.0.19"
 authors = [
   { name="Mohammadreza softrebel", email="sh.mohammad66@yahoo.com" },
     { name="Mahdi Ovan", email="mahdi.ovan@yahoo.com" },
@@ -18,8 +18,10 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/softrebel/pybsky"
-"Bug Tracker" = "https://github.com/softrebel/pybsky/issues"
+Homepage = "https://github.com/softrebel/pybsky"
+BugTracker = "https://github.com/softrebel/pybsky/issues"
+Repository = "https://github.com/softrebel/pybsky"
+
 
 [build-system]
 requires = ["setuptools>=61.0"]
@@ -41,6 +43,6 @@ unfixable = ["B"]
 
 [tool.setuptools.packages.find]
 where = ["."]  # list of folders that contain the packages (["."] by default)
-include = ["pybsky"]  # package names should match these glob patterns (["*"] by default)
+include = ["pybsky*"]  # package names should match these glob patterns (["*"] by default)
 exclude = []  # exclude packages matching these glob patterns (empty by default)
 namespaces = false
